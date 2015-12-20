@@ -1,0 +1,678 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Source+Sans+Pro:400,700italic);
+
+/* GENERAL
+-------------------------------------------------- */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.button:link, .button:active, .button:visited {
+    background-color: #8d81ac;
+    border-radius: 20px;
+    color: white;
+    padding: 7px 15px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #6d6385;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: #8d81ac;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #8d81ac;
+    text-decoration: underline;
+}
+
+/* HEADER NAVIGATION
+-------------------------------------------------- */
+
+header {
+    padding: 15px 0;
+}
+
+header .navbar {
+    border: none;
+    margin-bottom: 0;
+    height: 50px;
+}
+
+header .navbar-header {
+    display: inline-block;
+}
+
+/*** SITE LOGO ***/
+
+header .navbar-brand {
+    background: url(../images/brand-logo.png) no-repeat;
+    background-position: 0;
+    color: #333;
+    display: inline-block;
+    margin-left: 15px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    padding-left: 60px;
+}
+
+header .navbar-brand span {
+    color: #8d81ac;
+}
+
+@media screen and (min-width: 768px) {
+    header .navbar-brand {
+        margin-left: 0;
+    }
+}
+
+/*** NAV MENU ***/
+
+header .nav {
+    background-color: white;
+    border-top: 1px solid #635c73;
+}
+
+header .nav li a {
+    color: #635c73;
+    font-weight: 700;
+}
+
+header .nav li a:hover {
+    background-color: transparent;
+    color: #847a99;
+}
+
+@media screen and (min-width: 768px) {
+    header .nav {
+        border-top: none;
+    }
+}
+
+/*** BUY NOW BUTTON ***/
+
+header .button {
+    display: inline-block;
+    float: right;
+    margin: 8px 0;
+}
+
+/*** TOGGLE COLLAPSE BUTTON ***/
+
+header .navbar-toggle {
+    margin: 8px 0 8px 20px;
+}
+
+header .navbar-toggle .icon-bar {
+    background-color: #333;
+}
+
+/* BANNER SECTION
+-------------------------------------------------- */
+
+#banner {
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background: url(../images/bg-banner.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 300px;
+}
+
+#banner h1 {
+    color: white;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 60px;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+#banner .moto {
+    color: #8d81ac;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+#banner .version {
+    color: #727a83;
+    font-size: 12px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+/* ABOUT SECTION
+-------------------------------------------------- */
+
+#about {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#about .button {
+    display: block;
+    width: 250px;
+    padding: 10px 30px;
+    margin: -20px auto 10px;
+}
+
+#about .trial {
+    color: #848e97;
+    font-size: 10px;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+#about h1 {
+    color: #635c73;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#about .info {
+    color: #6d6d6d;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* WHAT YOU GET SECTION
+-------------------------------------------------- */
+
+#what-you-get {
+    background-color: #f4f4f4;
+    padding: 50px 0 40px;
+}
+
+#what-you-get h1 {
+    color: #8d81ac;
+    font-size: 40px;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 40px;
+}
+
+#features .feature {
+    margin: 10px 0;
+}
+
+#features .icon {
+    text-align: center;
+}
+
+#features .info h3 {
+    color: #323232;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-top: 0;
+}
+
+#features .info p {
+    color: #848e97;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#editor {
+    position: relative;
+    height: 525px;
+}
+
+#editor img {
+    position: absolute;
+    max-width: none;
+}
+
+@media screen and (min-width: 1200px) {
+    #what-you-get .header {
+        float: right;
+    }
+    
+    #what-you-get h1 {
+        margin-bottom: 25px;
+    }
+}
+
+/* SOCIAL SECTION
+-------------------------------------------------- */
+
+#social {
+    padding: 100px 0 50px;
+    text-align: center;
+}
+
+#twitter-carousel {
+    margin-bottom: 30px;
+}
+
+#social .item .item-header {
+    margin-bottom: 30px;
+}
+
+#social .item .user-pic {
+    text-align: right;
+}
+
+#social .item .user-pic img {
+    max-width: 75px;
+    max-height: 75px;
+    border-radius: 50px;
+}
+
+#social .item .user-info {
+    text-align: left;
+}
+
+#social .item .user-info h3 {
+    color: #474747;
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 15px 0 0 0;
+}
+
+#social .item .user-info span {
+    color: #8d81ac;
+}
+
+#social .item p {
+    color: #333;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-size: 1.5rem;
+}
+
+#social .item p.post-data {
+    color: #848e97;
+    font-family: inherit;
+}
+
+/*****  BOOTSTRAP CAROUSEL MODIFICATION *****/
+
+.carousel-control.left, .carousel-control.right,
+.carousel-control.left:hover, .carousel-control.right:hover {
+    background: none;
+}
+
+.carousel-control .glyphicon {
+    color: #a3a3a3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    text-shadow: none;
+}
+
+/***** SOCIAL LINKS *****/
+
+#social .links .item {
+    margin-bottom: 25px;
+}
+
+#social .links .social {
+    border-radius: 3px;
+    background: url(../images/social-icon-sprite.png) no-repeat;
+    font-size: 17px;
+    font-size: 1.7rem;
+    text-decoration: none;
+    display: block;
+    width: 200px;
+    margin: 0 auto 5px;
+    padding: 10px;
+}
+
+#social .links .follow {
+    color: #848e97;
+}
+
+#social .links .social.github {
+    color: black;
+    background-color: #f3f3f3;
+    background-position: 10px 11px;
+}
+
+#social .links .social.github:hover {
+    background-color: #e5e5e5;
+}
+
+#social .links .social.twitter {
+    color: white;
+    background-color: #26a6d1;
+    background-position: 10px -27px;
+}
+
+#social .links .social.twitter:hover {
+    background-color: #2abbeb;
+}
+
+#social .links .social.facebook {
+    color: white;
+    background-color: #3b5998;
+    background-position: 10px -70px;
+}
+
+#social .links .social.facebook:hover {
+    background-color: #4668b3;
+}
+
+@media screen and (min-width: 992px) {    
+    #social .links .links-box {
+        border-top: 1px solid #f4f4f4;
+        padding-top: 30px;
+    }    
+}
+
+
+/* FEEDBACKS AND PRICING
+-------------------------------------------------- */
+
+#feedbacks-and-pricing { 
+    background-color: #4b3b4e;
+    text-align: center;
+}
+
+#feedbacks-and-pricing h1 {
+    color: white;
+    font-weight: 700;
+}
+
+/***** FEEDBACKS *****/
+
+#feedbacks {
+    background: url(../images/bg-feedbacks.png) center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 50px 0;
+}
+
+#feedbacks h1 {
+    margin-bottom: 40px;
+}
+
+#feedbacks .item {
+    margin-bottom: 30px;
+}
+
+#feedbacks .item p {
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 22px;
+    line-height: 2.2rem;
+    margin: 25px 0;
+}
+
+/***** PRICING *****/
+
+#pricing {
+    border-top: 1px solid #655969;
+    background: url(../images/bg-pricing.png) center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 50px 0;
+}
+
+#pricing h1 {
+    margin-bottom: 40px;
+}
+
+#pricing .item-wrapper {
+    margin-bottom: 20px;
+}
+
+#pricing .item {
+    background-color: rgba(255, 255, 255, 0.10);
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    width: 200px;
+    height: 425px;
+    transition: all 0.5s;
+}
+
+#pricing .item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#pricing .item h4 {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 25px 0;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+#pricing .item:hover h4 {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+#pricing .item .price {
+    color: white;
+    font-size: 50px;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+#pricing .item .duration {
+    color: #9a939b;
+    font-size: 12px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+#pricing .item .devider {
+    background-color: #8d81ac;
+    width: 50px;
+    height: 3px;
+    margin: 0 auto 30px;
+}
+
+#pricing .item .licence {
+    color: white;
+    margin-bottom: 70px;
+}
+
+#pricing .item .button {
+    background-color: rgba(255, 255, 255, 0.15);
+    display: inline-block;
+    padding: 10px 30px;
+    text-transform: uppercase;
+}
+
+#pricing .item .button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#pricing .disclaimer {
+    color: #938396;
+    margin-top: 100px;
+    font-family: 'Source Sans Pro',  sans-serif;
+    font-size: 12px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* SUBSCRIPTION SECTION
+-------------------------------------------------- */
+
+#subscribe {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+}
+
+#subscribe .item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#subscribe h1 {
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 40px;
+    line-height: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+
+#subscribe form {
+    text-align: center;
+}
+
+#subscribe form input {
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    padding: 8px 25px;
+    margin: 3px 0;
+}
+
+#subscribe form input[type="email"] {
+    background-color: white;
+}
+
+#subscribe form input[type="submit"] {
+    color: white;
+    background-color: #8d81ac;
+    text-transform: uppercase;
+}
+
+#subscribe form input[type="submit"]:hover {
+    background-color: #9b8ebd;
+}
+
+/* MISCELLANEOUS SECTION
+-------------------------------------------------- */
+
+#misc {
+    padding: 25px 0 40px;
+}
+
+#misc h2 {
+    color: #d3d1da;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#misc h3 {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 20px;
+    line-height: 2rem;
+}
+
+#misc p {
+    color: #848e97;
+    font-size: 12px;
+    font-size: 1.2rem;
+}
+
+#misc .read-more {
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 20px 0;
+    padding: 7px 15px;
+    text-decoration: none;
+}
+
+#misc .read-more:hover {
+    background-color: #e3e3e3;
+}
+
+#misc .extensions h3,
+#misc .blog-news h3 {
+    color: #8d81ac;
+}
+
+/* FOOTER
+-------------------------------------------------- */
+
+footer .container {
+    border-top: 1px solid #f4f4f4;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+footer .logo {
+    background: url(../images/brand-logo.png) no-repeat;
+    background-position: 0;
+    color: #333;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 10px 10px 60px;
+}
+
+footer .logo span {
+    color: #8d81ac;
+}
+
+footer .widget {
+    color: #848e97;
+    font-size: 12px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+footer .widget h3 {
+    color: black;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+footer .widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer h3.phone {
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+footer p.available {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-size: 1rem;
+}
