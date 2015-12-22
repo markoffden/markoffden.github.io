@@ -24,6 +24,11 @@
                     </a>                   
                 </div><!-- container -->
             </div><!-- header-top -->
+            <div class="form-respond">
+                <div class="container">
+                    <h1>Hi, Denys! We've got and your credentials and looking forward to contact you soon!</h1>
+                </div>
+            </div>
             <nav class="navbar">
                 <div class="container">
                     <div class="navbar-header">

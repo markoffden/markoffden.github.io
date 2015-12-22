@@ -66,6 +66,14 @@ header .header-top a.facebook span {
     margin-right: 0;
 }
 
+/***** FORM RESPOND *****/
+
+header .form-respond {
+    color: white;
+    background-color: #1287bf;
+    text-align: center;
+}
+
 /***** NAVBAR *****/
 
 header .navbar {
