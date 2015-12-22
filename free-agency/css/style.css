@@ -69,8 +69,14 @@ header .header-top a.facebook span {
 /***** FORM RESPOND *****/
 
 header .form-respond {
-    color: white;
     background-color: #1287bf;
+}
+
+header .form-respond h1 {
+    color: white;
+    font-size: 25px;
+    font-size: 2.5rem;
+    margin-top: 10px;
     text-align: center;
 }
 
