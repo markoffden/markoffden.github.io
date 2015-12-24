@@ -14,7 +14,7 @@
             $startIndex = $_GET['startIndex'];
             $stopIndex = $_GET['stopIndex'];
             $numbers = array();
-            if ($min >= $max || $amount <= 0) {
+            if ($min >= $max || $amount <= 0 || $amount > ($max - $min)) {
                 echo '<img src="images/error.jpg" alt="Error"><br><a href="index.php">Back to the Form</a>';
             } else {
                 for ($i = 1; $i <= $amount; $i++) {
