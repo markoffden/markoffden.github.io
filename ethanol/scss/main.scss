@@ -1,0 +1,214 @@
+/* VARIABLES
+-------------------------------------------------- */
+
+/*** FONTS ***/
+$font: 'Lato', sans-serif;
+
+/*** COLORS ***/
+$dark: #333;
+$grey: #999;
+$light-grey: #f3f3f3;
+$yellow: #ffca33;
+
+/* GENERAL
+-------------------------------------------------- */
+
+body {
+    color: $dark;
+    font-family: $font;
+}
+
+    
+section {
+    padding: 150px 0 100px;
+    text-align: center;
+
+    h1 {
+        font-weight: 300;
+        text-transform: uppercase;
+
+        .yellow {
+            color: $yellow;
+            font-weight: 700;
+        }
+    }
+    
+    .note {
+        color: $grey;
+        font-size: 16px;
+        font-size: 16px;
+        font-style: italic;
+    }
+    
+    .devider {
+        background: url(../images/bg-devider.gif) center center repeat-x;
+        margin-bottom: 75px;
+    }
+}
+
+/* HEADER NAVBAR
+-------------------------------------------------- */
+
+nav.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    .navbar-header {
+        margin: 0;
+    }
+    
+    .navbar-brand {
+        padding: 3px 0;
+        
+        img {
+            vertical-align: top;
+        }
+    }
+    
+    .navbar-toggle {
+        border: 1px solid $dark;
+        font-size: 16px;
+        font-size: 1.6rem;
+        margin: 8px 0;
+        padding: 5px 13px; 
+    }
+    
+    .navbar-nav {
+        margin: 0;
+        
+        li:first-child {
+            margin-top: 15px;
+        }
+        
+        li:last-child {
+            margin-bottom: 15px;
+        }
+    }
+    
+    .navbar-nav > li > a {
+        color: $dark;
+        border-bottom: 3px solid transparent;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    .navbar-nav > li > a:hover,
+    .navbar-nav > li > a:focus {
+        border-bottom: 3px solid $yellow;
+        background-color: transparent;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav.navbar {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        
+        .navbar-nav {
+            padding: 0;
+            
+            li:first-child {
+                margin-top: 0;
+            }
+            
+            li:last-child {
+                margin-bottom: 0;
+            }
+        }
+        
+        .navbar-nav > li > a {
+            padding-bottom: 12px;
+        }
+    }
+}
+
+/* BANNER
+-------------------------------------------------- */
+
+#banner {
+    background: url(../images/bg-banner.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 250px 0;
+    text-align: center;
+    
+    h1 {
+        color: $yellow;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    
+    .note {
+        color: white;
+        font-style: normal;
+        margin-bottom: 100px;
+    }
+    
+    a {
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 5px;
+    }
+    
+    a:hover,
+    a:focus {
+        border-bottom: 3px solid $yellow;
+    }
+}
+
+/* JUMBOTRON
+-------------------------------------------------- */
+
+#jumbotron {
+    background-color: $yellow;
+    padding: 100px 0;
+    text-align: center;
+    
+    img {
+        margin-bottom: 50px;
+    }
+    
+    .note {
+        color: white;
+        font-style: normal;
+    }
+}
+
+/* WHAT WE DO
+-------------------------------------------------- */
+
+#what-we-do {
+    .item {
+        margin-bottom: 20px;
+    }
+    
+    .text {
+        text-align: right;
+        color: $grey;
+        
+        h3 {
+            margin-top: 0;
+            font-weight: 700;
+        }
+    }
+    
+    .icon {
+        padding-left: 0;
+        
+        span {
+            color: white;
+            background-color: $yellow;
+            font-size: 60px;
+            font-size: 6rem;
+            display: inline-block;
+            float: left;
+            padding: 20px 0;
+            text-align: center;
+            width: 100px;
+            border-radius: 7px 50px 50px 50px;
+        }
+    }
+}
