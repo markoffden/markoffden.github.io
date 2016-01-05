@@ -196,7 +196,7 @@ nav.navbar {
     }
     
     .icon {
-        padding-left: 0;
+        padding: 0;
         
         span {
             color: white;
@@ -210,5 +210,26 @@ nav.navbar {
             width: 100px;
             border-radius: 7px 50px 50px 50px;
         }
+    }
+    
+    .inverse {
+        .text {
+            text-align: left;
+        }
+        
+        .icon {
+            span {
+                float: right;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 479px) {
+    #what-we-do .icon span {
+        font-size: 40px;
+        font-size: 4rem;
+        padding: 15px 0;
+        width: 70px;
     }
 }
