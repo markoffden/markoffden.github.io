@@ -144,5 +144,76 @@ nav.navbar {
     font-size: 4rem;
     padding: 15px 0;
     width: 70px; } }
+/* KNOW US BETTER
+-------------------------------------------------- */
+#know-us .content {
+  background-color: #f3f3f3; }
+  #know-us .content .image {
+    padding: 0; }
+    #know-us .content .image .image-container {
+      background: url(../images/bg-know-us.jpg) left center no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      height: 500px;
+      position: relative;
+      margin-bottom: 50px; }
+      #know-us .content .image .image-container .social {
+        position: absolute;
+        bottom: 0;
+        left: 50px; }
+        #know-us .content .image .image-container .social a {
+          color: white;
+          font-size: 22px;
+          font-size: 2.2rem;
+          background-color: #ffca33;
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          padding: 9px 0; }
+        #know-us .content .image .image-container .social a:hover,
+        #know-us .content .image .image-container .social a:focus {
+          background-color: #f2bf24; }
+    #know-us .content .image p {
+      font-size: 22px;
+      font-size: 2.2rem;
+      text-align: right;
+      padding: 0 15px;
+      margin-bottom: 50px; }
+      #know-us .content .image p .bold {
+        font-size: 25px;
+        font-size: 2.5rem;
+        font-weight: 700; }
+  #know-us .content .bars {
+    padding: 25px 15px 30px 30px;
+    text-align: left; }
+    #know-us .content .bars h3 {
+      font-weight: 700;
+      margin-bottom: 30px; }
+    #know-us .content .bars p {
+      color: #999;
+      margin-bottom: 50px; }
+    #know-us .content .bars .progress {
+      background-color: #999;
+      border-radius: 0;
+      box-shadow: none;
+      height: 12px; }
+      #know-us .content .bars .progress .progress-bar {
+        background-color: #ffca33;
+        box-shadow: none; }
+  #know-us .content .counters {
+    border: 1px solid #999; }
+    #know-us .content .counters .item {
+      padding: 20px 5px; }
+      #know-us .content .counters .item .fa {
+        color: #ffca33;
+        font-size: 30px;
+        font-size: 3rem;
+        margin-bottom: 15px; }
+      #know-us .content .counters .item .amount {
+        font-size: 22px;
+        font-size: 2.2rem;
+        font-weight: 700; }
+      #know-us .content .counters .item h6 {
+        color: #999; }
 
 /*# sourceMappingURL=style.css.map */

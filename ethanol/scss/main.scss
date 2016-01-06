@@ -9,6 +9,7 @@ $dark: #333;
 $grey: #999;
 $light-grey: #f3f3f3;
 $yellow: #ffca33;
+$yellow-hover: #f2bf24;
 
 /* GENERAL
 -------------------------------------------------- */
@@ -231,5 +232,115 @@ nav.navbar {
         font-size: 4rem;
         padding: 15px 0;
         width: 70px;
+    }
+}
+
+/* KNOW US BETTER
+-------------------------------------------------- */
+
+#know-us {
+    .content {
+        background-color: $light-grey;
+        
+        .image {
+            padding: 0;
+            
+            .image-container {
+                background: url(../images/bg-know-us.jpg) left center no-repeat;
+                -webkit-background-size: cover;
+                background-size: cover;
+                height: 500px;
+                position: relative;
+                margin-bottom: 50px;
+                
+                .social {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50px;
+                    
+                    a {
+                        color: white;
+                        font-size: 22px;
+                        font-size: 2.2rem;
+                        background-color: $yellow;
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        padding: 9px 0;
+                    }
+                    
+                    a:hover,
+                    a:focus {
+                        background-color: $yellow-hover;
+                    }
+                }
+            }
+            
+            p {
+                font-size: 22px;
+                font-size: 2.2rem;
+                text-align: right;
+                padding: 0 15px;
+                margin-bottom: 50px;
+                
+                .bold {
+                    font-size: 25px;
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                }
+            }
+        }
+        
+        .bars {
+            padding: 25px 15px 30px 30px;
+            text-align: left;
+            
+            h3 {
+                font-weight: 700;
+                margin-bottom: 30px;
+            }
+            
+            p {
+                color: $grey;
+                margin-bottom: 50px;
+            }
+            
+            .progress {
+                background-color: $grey;
+                border-radius: 0;
+                box-shadow: none;
+                height: 12px;
+                
+                .progress-bar {
+                    background-color: $yellow;
+                    box-shadow: none;
+                }
+            }
+        }
+        
+        .counters {
+            border: 1px solid $grey;
+            
+            .item {
+                padding: 20px 5px;
+                
+                .fa {
+                    color: $yellow;
+                    font-size: 30px;
+                    font-size: 3rem;
+                    margin-bottom: 15px;
+                }
+                
+                .amount {
+                    font-size: 22px;
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+                
+                h6 {
+                    color: $grey;
+                }
+            }
+        }
     }
 }
