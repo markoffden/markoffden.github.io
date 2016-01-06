@@ -184,7 +184,7 @@ nav.navbar {
         font-size: 2.5rem;
         font-weight: 700; }
   #know-us .content .bars {
-    padding: 25px 15px 30px 30px;
+    padding: 30px;
     text-align: left; }
     #know-us .content .bars h3 {
       font-weight: 700;
@@ -201,13 +201,14 @@ nav.navbar {
         background-color: #ffca33;
         box-shadow: none; }
   #know-us .content .counters {
-    border: 1px solid #999; }
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc; }
     #know-us .content .counters .item {
-      padding: 20px 5px; }
+      padding: 25px 5px; }
       #know-us .content .counters .item .fa {
         color: #ffca33;
-        font-size: 30px;
-        font-size: 3rem;
+        font-size: 35px;
+        font-size: 3.5rem;
         margin-bottom: 15px; }
       #know-us .content .counters .item .amount {
         font-size: 22px;
@@ -215,5 +216,60 @@ nav.navbar {
         font-weight: 700; }
       #know-us .content .counters .item h6 {
         color: #999; }
+
+@media screen and (min-width: 768px) {
+  #know-us .item {
+    border-left: 1px solid #ccc; }
+
+  #know-us .item:last-child {
+    border-right: 1px solid #ccc; } }
+/* OUR TEAM
+-------------------------------------------------- */
+#our-team .staff .staff-pic {
+  position: relative; }
+  #our-team .staff .staff-pic img {
+    width: 100%; }
+  #our-team .staff .staff-pic .caption {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+    font-size: 1.2rem;
+    padding: 25px 15px;
+    position: absolute;
+    bottom: -20px;
+    display: none; }
+#our-team .staff .role {
+  color: #999;
+  font-size: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 15px; }
+#our-team .staff a {
+  color: white;
+  background-color: #ffca33;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 2px 0; }
+#our-team .staff a:hover,
+#our-team .staff a:focus {
+  background-color: #f2bf24; }
+#our-team .carousel-indicators {
+  bottom: -75px; }
+  #our-team .carousel-indicators li {
+    border: 1px solid white;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    width: 14px;
+    height: 14px;
+    margin: 0 1px; }
+  #our-team .carousel-indicators li.active {
+    border: 1px solid #bababa;
+    background-color: #bababa; }
+
+@media screen and (min-width: 768px) {
+  #our-team .staff-pic:hover .caption,
+  #our-team .staff-pic:focus .caption {
+    display: block; } }
 
 /*# sourceMappingURL=style.css.map */
