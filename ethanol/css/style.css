@@ -225,6 +225,8 @@ nav.navbar {
     border-right: 1px solid #ccc; } }
 /* OUR TEAM
 -------------------------------------------------- */
+#our-team .item {
+  margin: 0; }
 #our-team .staff .staff-pic {
   position: relative; }
   #our-team .staff .staff-pic img {

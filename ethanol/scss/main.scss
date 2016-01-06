@@ -361,6 +361,10 @@ nav.navbar {
 -------------------------------------------------- */
 
 #our-team {
+    .item {
+        margin: 0;
+    }
+    
     .staff {
         .staff-pic {
             position: relative;
