@@ -7,10 +7,13 @@ $font: 'Lato', sans-serif;
 /*** COLORS ***/
 $dark: #333;
 $grey: #999;
+$dark-grey: #666666;
 $light-grey: #f3f3f3;
 $grey-border: #ccc;
 $yellow: #ffca33;
 $yellow-hover: #f2bf24;
+$dark-yellow: #996600;
+$red: #ff0707;
 
 /* GENERAL
 -------------------------------------------------- */
@@ -22,7 +25,7 @@ body {
 
     
 section {
-    padding: 150px 0 100px;
+    padding: 100px 0;
     text-align: center;
 
     h1 {
@@ -46,6 +49,18 @@ section {
         background: url(../images/bg-devider.gif) center center repeat-x;
         margin-bottom: 75px;
     }
+    
+    .content {
+        background-color: $light-grey;
+    }
+}
+
+.table {
+    display: table;
+}
+
+.table-cell {
+    display: table-cell;
 }
 
 /* HEADER NAVBAR
@@ -239,109 +254,105 @@ nav.navbar {
 /* KNOW US BETTER
 -------------------------------------------------- */
 
-#know-us {
-    .content {
-        background-color: $light-grey;
-        
-        .image {
-            padding: 0;
-            
-            .image-container {
-                background: url(../images/bg-know-us.jpg) left center no-repeat;
-                -webkit-background-size: cover;
-                background-size: cover;
-                height: 500px;
-                position: relative;
-                margin-bottom: 50px;
-                
-                .social {
-                    position: absolute;
-                    bottom: 0;
-                    left: 50px;
-                    
-                    a {
-                        color: white;
-                        font-size: 22px;
-                        font-size: 2.2rem;
-                        background-color: $yellow;
-                        display: inline-block;
-                        width: 50px;
-                        height: 50px;
-                        padding: 9px 0;
-                    }
-                    
-                    a:hover,
-                    a:focus {
-                        background-color: $yellow-hover;
-                    }
-                }
-            }
-            
-            p {
-                font-size: 22px;
-                font-size: 2.2rem;
-                text-align: right;
-                padding: 0 15px;
-                margin-bottom: 50px;
-                
-                .bold {
-                    font-size: 25px;
-                    font-size: 2.5rem;
-                    font-weight: 700;
-                }
-            }
-        }
-        
-        .bars {
-            padding: 30px;
-            text-align: left;
-            
-            h3 {
-                font-weight: 700;
-                margin-bottom: 30px;
-            }
-            
-            p {
-                color: $grey;
-                margin-bottom: 50px;
-            }
-            
-            .progress {
-                background-color: $grey;
-                border-radius: 0;
-                box-shadow: none;
-                height: 12px;
-                
-                .progress-bar {
-                    background-color: $yellow;
-                    box-shadow: none;
-                }
-            }
-        }
-        
-        .counters {
-            border-top: 1px solid $grey-border;
-            border-bottom: 1px solid $grey-border;
-            
-            .item {
-                padding: 25px 5px;
-                
-                .fa {
-                    color: $yellow;
-                    font-size: 35px;
-                    font-size: 3.5rem;
-                    margin-bottom: 15px;
-                }
-                
-                .amount {
+#know-us {        
+    .image {
+        padding: 0;
+
+        .image-container {
+            background: url(../images/bg-know-us.jpg) left center no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+            height: 500px;
+            position: relative;
+            margin-bottom: 50px;
+
+            .social {
+                position: absolute;
+                bottom: 0;
+                left: 50px;
+
+                a {
+                    color: white;
                     font-size: 22px;
                     font-size: 2.2rem;
-                    font-weight: 700;
+                    background-color: $yellow;
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    padding: 9px 0;
                 }
-                
-                h6 {
-                    color: $grey;
+
+                a:hover,
+                a:focus {
+                    background-color: $yellow-hover;
                 }
+            }
+        }
+
+        p {
+            font-size: 22px;
+            font-size: 2.2rem;
+            text-align: right;
+            padding: 0 15px;
+            margin-bottom: 50px;
+
+            .bold {
+                font-size: 25px;
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .bars {
+        padding: 30px;
+        text-align: left;
+
+        h3 {
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: $grey;
+            margin-bottom: 50px;
+        }
+
+        .progress {
+            background-color: $grey;
+            border-radius: 0;
+            box-shadow: none;
+            height: 12px;
+
+            .progress-bar {
+                background-color: $yellow;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .counters {
+        border-top: 1px solid $grey-border;
+        border-bottom: 1px solid $grey-border;
+
+        .item {
+            padding: 25px 5px;
+
+            .fa {
+                color: $yellow;
+                font-size: 35px;
+                font-size: 3.5rem;
+                margin-bottom: 15px;
+            }
+
+            .amount {
+                font-size: 22px;
+                font-size: 2.2rem;
+                font-weight: 700;
+            }
+
+            h6 {
+                color: $grey;
             }
         }
     }
@@ -432,4 +443,544 @@ nav.navbar {
     #our-team .staff-pic:focus .caption {
         display: block;
     } 
+}
+
+/* WELCOME
+-------------------------------------------------- */
+
+#welcome {
+    .content {
+        padding: 100px 0 50px;
+    }
+    
+    .buttons {
+        margin-bottom: 50px;
+        
+        .item {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 3px 0 $grey-border;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            
+            .icon {
+                font-size: 35px;
+                font-size: 3.5rem;
+            }
+            
+            .text {
+                text-align: left;
+                
+                h3 {
+                    font-size: 16px;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    margin: 5px 0;
+                    text-transform: uppercase;
+                }
+                
+                .note {
+                    margin: 0;
+                    text-transform: lowercase;
+                }
+            }
+        }
+        
+        .item.active,
+        .item:hover,
+        .item:focus {
+            color: white;
+            background-color: $yellow;
+            box-shadow: 0 3px 0 $dark-yellow;
+            
+            .note {
+                color: white;
+            }
+        }
+    }
+    
+    .info {
+        text-align: left;
+        padding: 0;
+        
+        h2 {
+            font-size: 24px;
+            font-size: 2.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 10px 0 30px 0;
+        }
+        
+        p {
+            color: $grey;
+            margin-bottom: 50px;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+/* OUR WORK
+-------------------------------------------------- */
+
+#our-work {
+    .switches {
+        margin-bottom: 30px;
+    }
+    
+    .switch {
+        border: 1px solid $grey-border;
+        border-radius: 3px;
+        color: $dark-grey;
+        display: inline-block;
+        padding: 3px 10px;
+        margin: 3px;
+        text-decoration: none;
+    }
+    
+    .switch.active,
+    .switch:hover,
+    .switch:focus {
+        background-color: #f1f1f1;
+    }
+    
+    .samples {
+        .item {
+            padding: 0;
+            position: relative;
+            
+            img {
+                width: 100%;
+            }
+            
+            .overlay {
+                background-color: rgba(255, 204, 51, 0.8);
+                border: 10px solid rgba(224, 185, 69, 0.7);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+                transition: display 3s;
+                
+                .table {
+                    height: 100%;
+                    
+                    .table-cell {
+                        height: 100%;
+                        vertical-align: middle;
+                    }
+                }
+                
+                a {
+                    border: 1px solid white;
+                    border-radius: 50px;
+                    color: white;
+                    font-size: 22px;
+                    font-size: 2.2rem;
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    padding-top: 8px;
+                    margin: 0 3px;
+                }
+                
+                h4 {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                }
+                
+                .note {
+                    color: $dark-yellow;
+                }
+            }
+            
+        }
+        
+        .item:hover .overlay,
+        .item:focus .overlay {
+            display: block;
+        }
+    }
+}
+
+/* WORKFLOW
+-------------------------------------------------- */
+
+#workflow {
+    .padding-trick {
+        border-left: 3px solid white;
+        height: 75px;
+    }
+    
+    .items-container {
+        border-left: 3px solid white;
+    }
+    
+    .item {
+        position: relative;
+        
+        .icon {
+            position: absolute;
+            padding: 0;
+            top: 50%;
+            margin-top: -25px;
+            left: -25px;
+            
+            .fa {
+                color: white;
+                background-color: $yellow;
+                border: 3px solid white;
+                border-radius: 20px 100px 100px 100px;
+                font-size: 20px;
+                font-size: 2rem;
+                padding-top: 13px;
+                display: block;
+                width: 50px;
+                height: 50px;
+            }
+        }
+        
+        .text {
+            padding: 20px 15px 20px 50px;
+            text-align: left;
+            
+            h3 {
+                text-transform: uppercase;
+                font-size: 18px;
+                font-size: 1.8rem;
+                font-weight: 700;
+                margin: 0 0 10px 0;
+            }
+            
+            p {
+                color: $dark-grey;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #workflow {
+        .item {
+            .icon {
+                margin-top: -45px;
+                left: -45px;
+
+                .fa {
+                    font-size: 45px;
+                    font-size: 4.5rem;
+                    height: 90px;
+                    width: 90px;
+                    padding-top: 20px;
+                }
+            }
+            
+            .text {
+                padding: 20px 15px 20px 70px;
+            }
+        }
+    }
+}
+
+/* PRICING TABLE
+-------------------------------------------------- */
+
+#pricing-table {
+    .item-wrapper {
+        margin-bottom: 30px;
+    }
+    
+    .item {
+        border: 1px solid $dark;
+        border-radius: 7px;
+        transition: all 0.3s;
+        
+        h3 {
+            color: white;
+            background-color: $dark;
+            border-radius: 3px 3px 0 0;
+            font-size: 18px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 20px 0;
+            margin: 0;
+        }
+        
+        .price {
+            border-bottom: 1px solid $dark;
+            font-size: 20px;
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 15px 0;
+            
+            span {
+                font-size: 45px;
+                font-size: 4.5rem;
+            }
+        }
+        
+        .info {
+            color: $grey;
+        }
+        
+        .button {
+            color: white;
+            background-color: $dark;
+            border-radius: 5px;
+            font-size: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: block;
+            width: 85%;
+            padding: 10px 15px;
+            margin: 15px auto 5px;
+        }
+        
+        .trial {
+            color: $grey;
+            font-size: 10px;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+    }
+    
+    .item:hover,
+    .item:focus {
+        border: 1px solid $yellow;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+        box-shadow: 0 0 15px $dark-grey;
+        
+        h3 {
+            background-color: $yellow;
+        }
+        
+        .price {
+            border-bottom: 1px solid $yellow;
+        }
+        
+        .button {
+            background-color: $yellow;
+        }
+        
+        .button:hover,
+        .button:focus {
+            background-color: $yellow-hover;
+        }
+    }
+}
+
+/* RECENT ENTRIES
+-------------------------------------------------- */
+
+#recent-entries {
+    .content {
+        padding: 75px 0;
+    }
+    
+    .item-wrapper {
+        margin-bottom: 30px;    
+    }
+    
+    .item {
+        background-color: white;
+        border: 1px solid $light-grey;
+        border-radius: 5px;
+        
+        .image {
+            padding: 15px 0 15px 15px;
+            
+            img {
+                border: 1px solid $light-grey;
+                width: 100%;
+            }    
+        }
+        
+        .text {
+            padding: 15px;
+            text-align: left;
+            
+            .date {
+                color: $grey;
+                font-size: 12px;
+                font-size: 1.2rem;
+                margin: 0;
+            }
+            
+            h4 {
+                font-size: 16px;
+                font-weight: 700;
+                margin: 0 0 10px;
+            }
+            
+            .excerpt {
+                color: $grey;
+                line-height: 1.3;
+            }
+        }
+        
+        .meta {
+            border-top: 2px solid $light-grey;
+            padding: 5px 15px;
+            
+            .meta-items {
+                display: inline-block;
+                float: left;
+                padding: 5px;
+                
+                a {
+                    color: $yellow;
+                    margin: 0 1px;
+                }
+            }
+            
+            .likes {
+                background-color: $light-grey;
+                border-radius: 3px;
+                font-weight: 700;
+                display: inline-block;
+                float: right;
+                padding: 5px 10px;
+                
+                .fa {
+                    color: $red;
+                    margin-right: 10px;
+                }
+            } 
+        }
+    }
+    
+    .button {
+        color: white;
+        background-color: $yellow;
+        border-radius: 4px;
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 25px;
+    }
+    
+    .button:focus,
+    .button:hover {
+        background-color: $yellow-hover;
+    }
+}
+
+/* CONTACT US
+-------------------------------------------------- */
+
+#contact-us {
+    .map-frame {
+        background: url(../images/map.jpg) center center no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        height: 450px;
+        margin-bottom: 75px;
+    }
+    
+    .item {
+        margin-bottom: 30px;
+        
+        .fa {
+            color: white;
+            background-color: $yellow;
+            border-radius: 10px 75px 75px 75px;
+            font-size: 40px;
+            font-size: 4rem;
+            height: 70px;
+            width: 70px;
+            display: inline-block;
+            padding-top: 15px;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            font-weight: 700;
+        }
+    }
+    
+    form {
+        .item {
+            margin-bottom: 15px;
+        }
+        
+        .form-control {
+            font-weight: 700;
+            padding: 20px 15px;
+        }
+        
+        textarea {
+            resize: none;
+            height: 200px;
+        }
+        
+        button {
+            color: white;
+            border: none;
+            border-radius: 5px;
+            background-color: $yellow;
+            font-weight: 700;
+            display: inline-block;
+            padding: 10px 15px;
+        }
+        
+        button:hover,
+        button:focus {
+            background-color: $yellow-hover;
+        }
+    }
+}
+
+/* FOOTER
+-------------------------------------------------- */
+
+footer {
+    background-color: $yellow;
+    padding: 20px 0;
+    text-align: center;
+    
+    .copy {
+        color: white;
+        font-weight: 700;
+        padding-top: 1px;
+    }
+    
+    .social {
+        margin: 0;
+        
+        a {
+            color: white;
+            font-size: 16px;
+            font-size: 1.6rem;
+            margin: 0 7px;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    footer {
+        .copy {
+            display: inline-block;
+            float: left;
+            margin: 0;
+        }
+        
+        .social {
+            display: inline-block;
+            float: right;
+        }
+    }
 }
