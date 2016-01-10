@@ -168,7 +168,7 @@ header .carousel {
       background-color: rgba(255, 255, 255, 0.5);
       width: 13px;
       height: 13px;
-      margin: 0 1px; }
+      margin: 0 2px; }
     header .carousel .carousel-indicators li.active {
       background-color: white; }
   header .carousel .carousel-indicators:hover,
