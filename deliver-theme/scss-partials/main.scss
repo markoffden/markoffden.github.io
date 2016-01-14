@@ -1,0 +1,516 @@
+/*
+Theme Name: deliver
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: deliver
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+deliver is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+@import 'variables';
+@import 'general';
+
+/* HEADER
+-------------------------------------------------- */
+
+header {
+    height: 100%;
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+}
+
+/*** NAVBAR ***/
+
+header {
+    .navbar {
+        position: absolute;
+        top: 25px;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+        margin-bottom: 0;
+        
+        .navbar-header {
+            border-bottom: 1px solid white;
+            float: none;
+            margin: 0;
+            padding-bottom: 15px;
+            
+            .navbar-brand {
+                padding: 0;
+                margin: 0;
+                
+                a {
+                    color: white;
+                    font-family: $font-logo;
+                    font-size: 40px;
+                    font-size: 4rem;
+                    text-transform: none;
+                    text-decoration: none;
+                    line-height: 1;
+                }
+            }
+            
+            .social {
+                float: right;
+                padding-top: 5px;
+                
+                a {
+                    color: #6c6050;
+                    background-color: rgba(255, 255, 255, 0.75);
+                    border-radius: 50px;;
+                    font-size: 18px;
+                    font-size: 1.8rem;
+                    padding-top: 6px;
+                    display: inline-block;
+                    height: 35px;
+                    width: 35px;
+                    text-align: center;
+                }
+                
+                a:hover,
+                a:focus {
+                    background-color: white;
+                }
+            }
+        }
+        
+        .navbar-nav {
+            background-color: rgba(0, 0, 0, 0.75);
+            border-top: none;
+            padding: 0;
+            margin-left: 0;
+            
+            li {
+                a {
+                    color: white;
+                    font-family: $font-headers;
+                    text-transform: uppercase;
+                }
+                
+                a:hover,
+                a:focus {
+                    color: $green;
+                    background-color: transparent;
+                }
+            }
+        }
+        
+        .toggle-buttons {
+            margin-top: 10px;
+            float: right;
+            
+            .navbar-toggle {
+                color: white;
+                font-size: 18px;
+                font-size: 1.8rem;
+                padding: 5px 10px;
+                margin: 0 0 0 5px;
+            }
+            
+            .navbar-toggle.search {
+                display: block;
+            }
+        }
+        
+        #navbar-search {
+            height: 0;
+            overflow: hidden;
+            
+            input {
+                font-style: italic;
+                padding: 25px 15px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        .navbar {
+            .navbar-nav {
+                background-color: transparent;
+                
+                li:first-child {
+                    a {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*** CAROUSEL ***/
+
+header {
+    .carousel {
+        width: 100%;
+        height: 100%;
+        
+        .carousel-control.left,
+        .carousel-control.right {
+            background: none;
+        }
+        
+        .carousel-control {
+            .fa {
+                font-size: 30px;
+                font-size: 3rem;
+                display: block;
+                width: 30px;
+                height: 30px;
+                text-shadow: none;
+                position: absolute;
+                top: 50%;
+                margin-top: -15px;
+                left: 50%;
+                margin-left: -15px;
+            }
+        }
+        
+        .carousel-indicators {
+            padding: 0;
+            opacity: 0.5;
+            
+            li {
+                border: 3px solid white;
+                border-radius: 25px;
+                background-color: rgba(255, 255, 255, 0.5);
+                width: 13px;
+                height: 13px;
+                margin: 0 2px;
+            }
+
+            li.active {
+                background-color: white;
+            }
+        }
+        
+        .carousel-indicators:hover,
+        .carousel-indicators:focus {
+            opacity: 1;
+        }
+        
+        .carousel-inner {
+            width: 100%;
+            height: 100%;
+            
+            .item {
+                width: 100%;
+                height: 100%;
+                background-position: center center;
+                background-repeat: no-repeat;
+                -webkit-background-size: cover;
+                background-size: cover;
+                
+                .container {
+                    height: 100%;
+                    
+                    .table {
+                        height: 100%;
+                
+                        .table-cell {
+                            text-align: center;
+                            vertical-align: middle;
+
+                            h1 {
+                                color: white;
+                                margin: 100px 0 15px;
+                                line-height: 1.2;
+                            }
+
+                            .note {
+                                font-size: 16px;
+                                font-size: 1.6rem;
+                                color: white;
+                                margin: 0 0 15px;
+                            }
+
+                            a {
+                                border: 2px solid white;
+                                color: white;
+                                font-family: $font-headers;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                display: inline-block;
+                                padding: 10px 15px;
+                                transition: padding 0.25s;
+                            }
+
+                            a:hover,
+                            a:focus {
+                                padding: 10px 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* SERVICES
+-------------------------------------------------- */
+
+#services {    
+    .item {
+        margin-bottom: 30px;
+        
+        h3 {
+            color: $dark-grey;
+        }
+        
+        .read-more {
+            color: $green;
+        }
+    }
+}
+
+/* LATEST WORK
+-------------------------------------------------- */
+
+#latest-work {
+    background-color: $light-grey;
+    padding-bottom: 0;
+    margin-bottom: 50px;
+    
+    .note {
+        margin-bottom: 25px;
+    }
+    
+    .item {
+        margin-bottom: 30px;
+        
+        a {
+            display: inline-block;
+            position: relative;
+            
+            img {
+                max-width: 100%;
+            }
+            
+            .overlay {
+                background-color: rgba(255, 255, 255, 0.15);
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                
+                .glyphicon {
+                    color: #c1c1c1;
+                    background-color: #464c52;
+                    font-size: 25px;
+                    font-size: 2.5rem;
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    position: relative;
+                    top: 50%;
+                    margin-top: -25px;
+                    left: 50%;
+                    margin-left: -25px;
+                    padding-top: 12px;
+                }
+            }
+        }
+        
+        a:hover,
+        a:focus {
+            .overlay {
+                display: block;
+            }
+        }
+        
+        h3 {
+            color: $dark-grey;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #latest-work {
+        margin-bottom: 130px;
+        
+        .item {
+            margin-bottom: -80px;
+        }
+    }
+}
+
+/* FOOTER
+-------------------------------------------------- */
+
+footer {
+    color: $grey;
+    background-color: $dark;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1.75;
+    padding-top: 50px;
+    
+    .branding {
+        margin-bottom: 30px;
+        
+        .top {
+            margin-bottom: 15px;
+            
+            h1 {
+                color: white;
+                font-family: $font-logo;
+                text-transform: none;
+                float: left;
+                margin: 0;
+            }
+            
+            .social {
+                float: right;
+                padding-top: 3px;
+                
+                a {
+                    color: $dark-grey;
+                    background-color: rgba(255, 255, 255, 0.75);
+                    border-radius: 50px;;
+                    font-size: 18px;
+                    font-size: 1.8rem;
+                    padding-top: 3px;
+                    display: inline-block;
+                    height: 35px;
+                    width: 35px;
+                    text-align: center;
+                }
+                
+                a:hover,
+                a:focus {
+                    background-color: white;
+                }
+            }
+        }
+        
+        .note {
+            clear: both;
+        }
+    }
+    
+    .widget {
+        margin-bottom: 30px;
+        
+        h3 {
+            color: white;
+            font-size: 18px;
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+        
+        .phone {
+            color: white;
+            font-family: $font-headers;
+            font-size: 20px;
+            font-size: 2rem;
+        }
+        
+        ul {
+            padding-left: 0;
+            list-style-position: inside;
+            list-style-image: url(../images/list-bullet.png);
+            
+            li {
+                a {
+                    color: $grey;    
+                }
+            }
+        }
+        
+        input {
+            color: white;
+            font-size: 14px;
+            font-size: 1.4rem;
+            background-color: #4e4c4c;
+            border: none;
+            padding: 12px 10px;
+            width: 70%;
+        }
+        
+        input[type="submit"] {
+            background-color: #828282;
+            font-family: $font-headers;
+            padding: 12px 15px;
+            margin-left: 5px;
+            width: 25%;
+        }
+        
+        input[type="submit"]:hover,
+        input[type="submit"]:focus {
+            color: $dark;
+            background-color: $light-grey;
+        }
+        
+    }
+    
+    .hr {
+        background-color: #555;
+    }
+    
+    .footer-bottom {
+        padding: 15px 0;
+        
+        .copyright,
+        .other-links {
+            font-family: $font-headers;
+            text-align: center;
+            text-transform: uppercase;
+            
+            a {
+                color: $grey;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        .footer-bottom {
+            .copyright {
+                float: left;
+            }
+            
+            .other-links {
+                float: right;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    footer {
+        .branding {
+            padding-right: 30px;
+        }
+        
+        .widget {
+            input {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            
+            input[type="submit"] {
+                width: 35%;
+                margin-left: 0;
+                float: right;
+            }
+        }
+    }
+}
