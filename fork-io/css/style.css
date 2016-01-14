@@ -263,9 +263,13 @@ header .navbar-toggle .icon-bar {
     text-align: center;
 }
 
-#twitter-carousel {
+#social .tweets {
     margin-bottom: 30px;
 }
+
+#social .tweets .item {
+    padding: 0 3%;
+} 
 
 #social .item .item-header {
     margin-bottom: 30px;
