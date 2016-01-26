@@ -17,9 +17,9 @@ jQuery(function () {
             var thisCarousel = $(this);
             var carouselID = thisCarousel.attr('id');
             thisCarousel.prepend('<ol class="carousel-indicators">');
-            $(this).find('.item').first().addClass('active');
-            $(this).find('.item').each(function (index, elem) {
-                thisCarousel.find('.carousel-indicators').append('<li data-target="#' + carouselID + '" data-slide-to="' + index + '"></li>')
+            thisCarousel.find('.item').first().addClass('active');
+            thisCarousel.find('.item').each(function (index, elem) {
+                thisCarousel.find('.carousel-indicators').append('<li data-target="#' + carouselID + '" data-slide-to="' + index + '"></li>');
             });
             thisCarousel.find('.carousel-indicators').children().first().addClass('active');
         });
@@ -27,7 +27,7 @@ jQuery(function () {
         
         /* SEARCH TOGGLE
         -------------------------------------------------------------------- */
-        $('#toggle-search').click(function (e) {
+        $('#toggle-search').click(function (event) {
             if ($('#navbar-search').hasClass('show')) {
                 $('#navbar-search').animate({
                     'height': 0,
@@ -37,7 +37,15 @@ jQuery(function () {
                     'height': '52px',
                     'margin-top': '10px'}, 250).addClass('show');
             }
-            e.preventDefault();
+            event.preventDefault();
+        });
+        
+        /* SCROLL TO TARGET
+        -------------------------------------------------------------------- */
+        $('.scroll-to-target').click(function (event) {
+            event.preventDefault();
+            var target = $(this).attr('href');
+            $('html, body').animate({scrollTop: $(target).offset().top - 15}, 500);
         });
     });
 });

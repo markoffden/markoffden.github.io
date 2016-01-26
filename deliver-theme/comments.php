@@ -25,15 +25,9 @@ if ( post_password_required() ) {
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'deliver' ) ),
-					number_format_i18n( get_comments_number() ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			?>
-		</h2>
+		<h3 class="comments-title">
+			<?php _e('Comments', 'deliver'); ?>
+		</h3>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
@@ -46,15 +40,17 @@ if ( post_password_required() ) {
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // Check for comment navigation. ?>
-
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
-			?>
-		</ol><!-- .comment-list -->
+       
+        <div class="comment-list">
+            <?php
+                wp_list_comments( array(
+                    'style' => 'div',
+                    'avatar_size' => 50,
+                    'max_depth' => 3,
+                    'callback' => 'deliver_comments_callback'
+                ));
+            ?>
+        </div>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
@@ -79,7 +75,23 @@ if ( post_password_required() ) {
 	<?php
 	endif;
 
-	comment_form();
+	comment_form(array(
+        'title_reply' => __('Leave a Comment', 'deliver'),
+        'fields' => array(
+
+                      'author' =>
+                        '<div class="row comment-form comment-form-author"><div class="text col-sm-6"><label for="author">' . __( 'Name', 'deliver' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<p class="note">' . __('Your full name please', 'deliver') . '</p></div><div class="input col-sm-6"><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" ' . $aria_req . ' /></div></div>',
+
+                      'email' =>
+                        '<div class="row comment-form comment-form-email"><div class="text col-sm-6"><label for="email">' . __( 'Email Address', 'deliver' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<p class="note">' . __('Used for gravatar', 'deliver') . '</p></div><div class="input col-sm-6"><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" ' . $aria_req . ' /></div></div>',
+
+                      'url' =>
+                        '<div class="row comment-form comment-form-url"><div class="text col-sm-6"><label for="url">' . __( 'Website', 'deliver' ) . '</label>' . '<p class="note">' . __('Link back if you want', 'deliver') . '</p></div><div class="input col-sm-6"><input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" /></div></div>'
+                    ),
+        'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+        'comment_notes_before' => '',
+        'label_submit' => __('Send Message', 'deliver')
+    ));
 	?>
 
 </div><!-- #comments -->

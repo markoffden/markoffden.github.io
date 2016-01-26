@@ -26,5 +26,15 @@ jQuery(function () {
             e.preventDefault();
         });
         
+        /*** ARRAY GAME ***/
+        var oldArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var newArray = [];
+        
+        while (oldArray.length) {
+            newArray.push(oldArray.splice(0, 3));
+        }
+                
+        console.log(oldArray);
+        console.log(newArray);
     });
 });

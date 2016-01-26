@@ -36,7 +36,6 @@ jQuery(function () {
                 'right': '3%'
             });
             var items = thisSlider.find('.item');
-            items.css('padding', '0 75px');
             items.wrapAll('<div class="items-container">');
             var container = thisSlider.find('.items-container');
             container.css({

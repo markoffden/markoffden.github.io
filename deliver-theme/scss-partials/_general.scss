@@ -2,10 +2,10 @@
 -------------------------------------------------- */
 
 body {
-    color: $grey;
+    color: $content-color;
 }
 
-h1, h3 {
+h1, h2, h3 {
     font-family: $font-headers;
     text-transform: uppercase;
 }
@@ -25,6 +25,46 @@ section {
         font-size: 2.5rem;
         margin: 0 0 20px 0;
     }
+}
+
+section.main {
+    text-align: left;
+    
+    h3 {
+        color: $dark-grey;
+        font-size: 18px;
+        font-size: 1.8rem;
+        margin: 0 0 20px 0;
+    }
+    
+    .content {
+        margin-bottom: 35px;
+    }
+    
+    .item {
+        margin-bottom: 35px;
+    }
+    
+    .item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    section.main {
+        .content {
+            padding-right: 50px;
+            margin-bottom: 0;
+        }
+        
+        .item {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.bold {
+    font-weight: 700;
 }
 
 .green {
@@ -67,4 +107,11 @@ section {
     height: 1px;
     margin: 0;
     padding: 0; 
+}
+
+/** I APPLIED THIS STYLE TO ADJUST FONT SIZE DISCREPANCY 
+    BETWEEN SITE FONT LETTERS AND DIGITS **/
+.digits-font-fix {
+    font-size: 1.2em;
+    line-height: 1em;
 }
