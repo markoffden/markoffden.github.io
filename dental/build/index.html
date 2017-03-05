@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+    <div id="page-overlay">
+        <div class="popup">
+            <img id="doctor-image" src="" alt="Image of doctor">
+            <h3 id="doctor-name"></h3>
+            <div id="doctor-content" class="content"></div>
+            <div id="close-popup">
+                <span class="fa fa-times"></span>
+            </div>
+        </div>
+    </div>
     <div class="page-wrapper">
         <div class="container">
             <section class="banner">
@@ -71,6 +81,7 @@
                             <div class="info">
                                 <h3>Иван Иванов</h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                                <a href="#" data-id="0" class="doctors-more">детальніше <span class="fa fa-arrow-circle-o-right"></span></a>
                             </div>
                         </div>
                     </div>
@@ -80,6 +91,7 @@
                             <div class="info">
                                 <h3>Сергей Сергеев</h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                                <a href="#" data-id="1" class="doctors-more">детальніше <span class="fa fa-arrow-circle-o-right"></span></a>
                             </div>
                         </div>
                     </div>
@@ -213,7 +225,6 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- endbower -->
-    <script src="js/script.min.js"></script>
     <script>
         function initMap() {
             var ck = {lat: 49.44, lng: 32.05};
@@ -229,5 +240,7 @@
         }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5YX214Zhg0fx_AuPQ4ZKDTItsnAoWO98&callback=initMap"></script>
+    <script src="js/data.min.js"></script>
+    <script src="js/script.min.js"></script>
 </body>
 </html>
