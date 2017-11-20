@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WrapperAdminFront</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <svg style="display: none;">
+        <symbol id="ic-dashboard" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic{fill:none;stroke:#c3c8d3;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                .ic-active{stroke:#5190fb;}
+            </style>
+            <path d="M39.2,40.5C42.8,36.8,45,31.6,45,26c0-11.6-9.4-21-21-21C12.4,5,3,14.4,3,26c0,5.6,2.2,10.8,5.8,14.5"/>
+            <circle cx="24" cy="26" r="3.2"/>
+            <line x1="26.4" y1="23.7" x2="33" y2="17.1"/>
+        </symbol>
+        <symbol id="ic-scrapers" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic{fill:none;stroke:#c3c8d3;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                .ic-dashed{stroke-dasharray:4,6;}
+                .ic-active{stroke:#5190fb;}
+            </style>
+            <g>
+                <polyline points="14,12.1 14,19.4 21.3,19.4"/>
+                <polyline points="12.1,34 19.4,34 19.4,26.7 	"/>
+                <path d="M19.4,34c-0.8-0.8-1.6-1.5-2.5-2.4C6.1,20.8,0.3,8.1,4.2,4.2C8.1,0.3,20.1,6.1,31,17
+		c10.9,10.9,16.6,22.9,12.8,26.8c-2.5,2.5-8.4,1-15.2-3.3"/>
+                <path class="ic-dashed" d="M14,19.4c0.8-0.8,1.5-1.6,2.4-2.5C27.2,6.1,39.9,0.3,43.8,4.2C47.7,8.1,41.9,20.1,31,31
+		C20.1,41.9,8.1,47.7,4.2,43.8c-2.5-2.5-1-8.4,3.3-15.2"/>
+            </g>
+        </symbol>
+        <symbol id="ic-businesses" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic{fill:none;stroke:#c3c8d3;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                .ic-active{stroke:#5190fb;}
+            </style>
+            <g>
+                <path d="M43.1,23H4.9C3.9,23,3,22.1,3,21V9h42v12C45,22.1,44.1,23,43.1,23z"/>
+                <path d="M31,8c0-1.7-1.3-3-3-3h-8c-1.7,0-3,1.3-3,3"/>
+                <line x1="14" y1="20" x2="14" y2="26"/>
+                <line x1="34" y1="20" x2="34" y2="26"/>
+                <path d="M5,23v18.1C5,42.1,5.9,43,6.9,43h34.2c1,0,1.9-0.9,1.9-1.9V23"/>
+            </g>
+        </symbol>
+        <symbol id="ic-queue" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic{fill:none;stroke:#c3c8d3;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                .ic-active{stroke:#5190fb;}
+            </style>
+            <g>
+                <polygon points="24,27.9 3,17.7 24,7.6 45,17.7 	"/>
+                <polyline points="40.5,22.8 45,25 24,35.1 3,25 7.5,22.8 	"/>
+                <polyline points="40.5,30.1 45,32.2 24,42.4 3,32.2 7.5,30.1 	"/>
+            </g>
+        </symbol>
+        <symbol id="ic-mailing" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic{fill:none;stroke:#c3c8d3;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                .ic-active{stroke:#5190fb;}
+            </style>
+            <g>
+                <path d="M3.7,9.6l18.3,15.9c1.1,0.9,2.7,0.9,3.7,0L44.2,9.6"/>
+                <path d="M43,39H5c-1.1,0-2-0.9-2-2V11c0-1.1,0.9-2,2-2h38c1.1,0,2,0.9,2,2v26C45,38.1,44.1,39,43,39z"/>
+            </g>
+        </symbol>
+        <symbol id="ic-users" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic{fill:none;stroke:#c3c8d3;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                .ic-active{stroke:#5190fb;}
+            </style>
+            <g >
+                <circle cx="18.6" cy="19.4" r="7.8"/>
+                <path d="M3,42.8c0-8.6,7-15.6,15.6-15.6s15.6,7,15.6,15.6"/>
+                <path d="M45,33.4C44.6,26.5,38.8,21,31.8,21c-0.8,0-1.7,0.1-2.5,0.2"/>
+                <path d="M29.4,20.6c0.7,0.3,1.6,0.4,2.4,0.4c3.9,0,7-3.1,7-7s-3.1-7-7-7c-2.8,0-5.2,1.6-6.3,4"/>
+            </g>
+        </symbol>
+        <symbol id="ic-settings" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic{fill:none;stroke:#c3c8d3;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                .ic-active{stroke:#5190fb;}
+            </style>
+            <g>
+                <circle cx="24" cy="24" r="8.1"/>
+                <path d="M15,37.4l-2.2,2.2c-0.6,0.6-1.6,0.6-2.2,0l-2.2-2.2c-0.6-0.6-0.6-1.6,0-2.2l2.2-2.2c-1.1-1.7-2-3.7-2.4-5.7
+		H4.6c-0.9,0-1.6-0.7-1.6-1.6v-3.2c0-0.9,0.7-1.6,1.6-1.6h3.6c0.4-2.1,1.2-4,2.4-5.7l-2.2-2.2c-0.6-0.6-0.6-1.6,0-2.2l2.2-2.2
+		c0.6-0.6,1.6-0.6,2.2,0l2.2,2.2c1.7-1.1,3.6-2,5.7-2.4V4.6c0-0.9,0.7-1.6,1.6-1.6h3.2c0.9,0,1.6,0.7,1.6,1.6v3.6
+		c2.1,0.4,4,1.2,5.7,2.4l2.2-2.2c0.6-0.6,1.6-0.6,2.2,0l2.2,2.2c0.6,0.6,0.6,1.6,0,2.2L37.4,15c1.1,1.7,2,3.7,2.4,5.7h3.6
+		c0.9,0,1.6,0.7,1.6,1.6v3.2c0,0.9-0.7,1.6-1.6,1.6h-3.6c-0.4,2.1-1.2,4-2.4,5.7l2.2,2.2c0.6,0.6,0.6,1.6,0,2.2l-2.2,2.2
+		c-0.6,0.6-1.6,0.6-2.2,0L33,37.4c-1.7,1.1-3.7,2-5.7,2.4v3.6c0,0.9-0.7,1.6-1.6,1.6h-3.2c-0.9,0-1.6-0.7-1.6-1.6v-3.6
+		C18.7,39.4,16.7,38.6,15,37.4z"/>
+            </g>
+        </symbol>
+        <symbol id="ic-filters" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic-button{fill:none;stroke:#c0c6d0;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                .ic-button.ic-button-active{stroke: #5190fb;}
+            </style>
+            <g>
+                <path d="M5.3,11.4l11.8,13.5c0.6,0.7,0.9,1.5,0.9,2.4V39l12-6v-5.6c0-0.9,0.3-1.8,0.9-2.4l11.8-13.5
+		c0.5-0.6,0.5-1.6-0.5-2.4c0,0-36.4,0-36.4,0C4.8,9.8,4.8,10.8,5.3,11.4z"/>
+            </g>
+        </symbol>
+        <symbol id="ic-checked" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic-checked{fill:none;stroke:#5190fb;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                .ic-available{fill:none;stroke:#44e795;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                .ic-available-unchecked{fill:none;stroke:#c3c8d3;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+            </style>
+            <circle cx="24" cy="24" r="22.5"/>
+            <polyline points="37.4,16.3 20.2,33.6 12.5,25.9 "/>
+        </symbol>
+        <symbol id="ic-unchecked" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic-unchecked{fill:none;stroke:#a3a8ad;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+            </style>
+            <circle cx="24" cy="24" r="22.5"/>
+        </symbol>
+        <symbol id="ic-arrow-down" viewBox="0 0 96 96">
+            <style type="text/css">
+                .ic-arrow-down{fill:none;stroke:#7a8289;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+            </style>
+            <g>
+                <polyline points="67,67 48,86 29,67 	"/>
+                <line x1="48" y1="30" x2="48" y2="86"/>
+            </g>
+        </symbol>
+        <symbol id="ic-arrow-up" viewBox="0 0 96 96">
+            <style type="text/css">
+                .ic-arrow-up{fill:none;stroke:#7a8289;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+            </style>
+            <g id="arr-vertical">
+                <polyline points="29,29 48,10 67,29 	"/>
+                <line x1="48" y1="66" x2="48" y2="10"/>
+            </g>
+        </symbol>
+        <symbol id="ic-deselect" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic-deselect{fill:none;stroke:#a3a8ad;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                .ic-unavailable{fill:none;stroke:#ff9e77;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                .ic-unavailable-unchecked{fill:none;stroke:#c3c8d3;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+            </style>
+            <circle cx="24" cy="24" r="22.5"/>
+            <line x1="11" y1="24" x2="37" y2="24"/>
+        </symbol>
+        <symbol id="ic-search" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic-search{fill:none;stroke:#aeb2ba;stroke-width:2;stroke-linecap:square;stroke-miterlimit:10;}
+            </style>
+            <g>
+                <circle cx="20.9" cy="20.9" r="15.4"/>
+                <rect x="37" y="29.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -15.7086 37.8856)" class="st0" width="1.8" height="17"/>
+            </g>
+        </symbol>
+        <symbol id="ic-cross" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic-cross{fill:none;stroke:#c3c8d3;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+            </style>
+            <line x1="12.7" y1="35.3" x2="35.3" y2="12.7"/>
+            <line x1="12.7" y1="12.7" x2="35.3" y2="35.3"/>
+        </symbol>
+        <symbol id="ic-logout" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic-logout{fill:#aeb2ba;}
+            </style>
+            <g>
+                <path d="M35.6,35.7l0.7-0.7h3.5c-1.8,2.5-4.1,4.5-6.8,6c-2.8,1.5-5.8,2.2-9,2.2c-5.3,0-9.9-1.9-13.6-5.6C6.6,33.9,4.8,29.3,4.8,24
+		s1.9-9.9,5.6-13.6c3.8-3.8,8.3-5.6,13.6-5.6c3.2,0,6.2,0.7,9,2.2c2.8,1.5,5.1,3.5,6.8,6h-3.5l-0.7-0.7C32.4,9.1,28.5,7.5,24,7.5
+		c-4.6,0-8.5,1.6-11.7,4.8C9.1,15.5,7.5,19.4,7.5,24c0,4.6,1.6,8.5,4.8,11.7c3.2,3.2,7.1,4.8,11.7,4.8
+		C28.5,40.5,32.4,38.9,35.6,35.7z M33.5,29.8l4.5-4.5H18.5v-2.8H38l-4.5-4.5l1.9-2l7.8,7.8l-7.8,7.8L33.5,29.8z"/>
+            </g>
+        </symbol>
+        <symbol id="loader-animation" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+            <style type="text/css">
+                .loader-ball{background: none;}
+            </style>
+            <circle cx="50" ng-attr-cy="{{config.cy}}" ng-attr-r="{{config.radius}}" ng-attr-fill="{{config.color}}" cy="25.0781" r="13" fill="#5190fb">
+                <animate attributeName="cy" calcMode="spline" values="23;77;23" keyTimes="0;0.5;1" dur="1.1" keySplines="0.45 0 0.9 0.55;0 0.45 0.55 0.9" begin="0s" repeatCount="indefinite"></animate>
+            </circle>
+        </symbol>
+        <symbol id="loader-mini" viewBox="0 37 100 25" preserveAspectRatio="xMidYMid" style="background: none;">
+            <rect ng-attr-x="{{config.x1}}" ng-attr-y="{{config.y}}" ng-attr-width="{{config.width}}" ng-attr-height="{{config.height}}" ng-attr-fill="{{config.c1}}" x="15" y="40" width="20" height="20" fill="#5190fb">
+                <animate attributeName="y" calcMode="spline" values="35;40;40" keyTimes="0;0.5;1" dur="1" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s" repeatCount="indefinite"></animate>
+                <animate attributeName="height" calcMode="spline" values="30;20;20" keyTimes="0;0.5;1" dur="1" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s" repeatCount="indefinite"></animate>
+            </rect>
+            <rect ng-attr-x="{{config.x2}}" ng-attr-y="{{config.y}}" ng-attr-width="{{config.width}}" ng-attr-height="{{config.height}}" ng-attr-fill="{{config.c2}}" x="40" y="40" width="20" height="20" fill="rgba(31.764705882352935%,56.470588235294116%,98.43137254901958%,0.718)">
+                <animate attributeName="y" calcMode="spline" values="36.25;40;40" keyTimes="0;0.5;1" dur="1" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s" repeatCount="indefinite"></animate>
+                <animate attributeName="height" calcMode="spline" values="27.5;20;20" keyTimes="0;0.5;1" dur="1" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s" repeatCount="indefinite"></animate>
+            </rect>
+            <rect ng-attr-x="{{config.x3}}" ng-attr-y="{{config.y}}" ng-attr-width="{{config.width}}" ng-attr-height="{{config.height}}" ng-attr-fill="{{config.c3}}" x="65" y="39.9837" width="20" height="20.0326" fill="rgba(31.764705882352935%,56.470588235294116%,98.43137254901958%,0.357)">
+                <animate attributeName="y" calcMode="spline" values="37.5;40;40" keyTimes="0;0.5;1" dur="1" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="0s" repeatCount="indefinite"></animate>
+                <animate attributeName="height" calcMode="spline" values="25;20;20" keyTimes="0;0.5;1" dur="1" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="0s" repeatCount="indefinite"></animate>
+            </rect>
+        </symbol>
+        <symbol id="ic-calendar" viewBox="0 0 44 44" style="enable-background:new 0 0 44 44;" xml:space="preserve" x="0px" y="0px">
+            <style type="text/css">
+                .ic-calendar{fill:none;}
+            </style>
+            <path class="ic-calendar-stroke" d="M33,4V2h-2v2H13V2h-2v2H6v8v28h24l0.1-0.1c0,0,0,0,0,0c1.3-0.2,2.6-0.6,3.7-1.3c0,0,0.1-0.1,0.1-0.1
+	c0.2-0.1,0.3-0.2,0.5-0.3c0.1-0.1,0.1-0.1,0.2-0.2c0.1-0.1,0.3-0.2,0.4-0.3c0.1-0.1,0.2-0.1,0.2-0.2c0.1-0.1,0.2-0.2,0.3-0.4
+	c0.1-0.1,0.2-0.2,0.2-0.3c0.1-0.1,0.2-0.2,0.3-0.4c0.1-0.1,0.2-0.2,0.2-0.3c0.1-0.1,0.2-0.2,0.3-0.4c0.1-0.1,0.1-0.2,0.2-0.3
+	c0.1-0.1,0.1-0.2,0.2-0.4c0.1-0.1,0.1-0.3,0.2-0.4c0.1-0.1,0.1-0.2,0.2-0.4c0.1-0.1,0.1-0.3,0.2-0.4c0-0.1,0.1-0.2,0.1-0.4
+	c0-0.2,0.1-0.3,0.1-0.5c0-0.1,0.1-0.2,0.1-0.3c0-0.2,0.1-0.4,0.1-0.6c0-0.1,0-0.2,0-0.3c0-0.3,0-0.6,0-0.9V12V4H33z M35.7,33.1
+	c-0.1,0.2-0.1,0.4-0.2,0.6c0,0.1-0.1,0.1-0.1,0.2c-0.1,0.2-0.2,0.4-0.3,0.6c0,0,0,0,0,0c-0.1,0.2-0.3,0.5-0.5,0.7
+	c0,0-0.1,0.1-0.1,0.1c-0.1,0.2-0.3,0.4-0.5,0.5c0,0-0.1,0.1-0.1,0.1c-0.4,0.4-0.8,0.7-1.2,1c-0.1,0-0.1,0.1-0.2,0.1
+	c-0.2,0.1-0.3,0.2-0.5,0.3c-0.1,0-0.1,0.1-0.2,0.1c-0.2,0.1-0.4,0.2-0.7,0.3c0,0-0.1,0-0.1,0V33L35.7,33.1
+	C35.7,33,35.7,33.1,35.7,33.1z M36,31h-7v7H8V12h28V31z"/>
+            <rect class="ic-calendar" width="44" height="44"/>
+        </symbol>
+        <symbol id="ic-add" x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+            <style type="text/css">
+                .ic-add{fill:none;stroke:#c3c8d3;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+            </style>
+            <line class="ic-add" x1="8" y1="24" x2="40" y2="24"/>
+            <line class="ic-add" x1="24" y1="8" x2="24" y2="40"/>
+        </symbol>
+        <symbol id="ic-warning" x="0px" y="0px" viewBox="0 0 48 48">
+            <style type="text/css">
+                .ic-warning-success { fill: #44e795; }
+                .ic-warning-warning { fill: #ff9e77; }
+                .ic-warning-error { fill: #ff7da5; }
+                .ic-warning-unchecked { fill: #c3c8d3; }
+            </style>
+            <path d="M47.3,41L25.7,3.7c-0.8-1.3-2.7-1.3-3.5,0L0.7,41c-0.8,1.3,0.2,3,1.7,3h43.1C47.1,44,48,42.3,47.3,41z M26.1,13.6l-0.3,16.9
+	h-3.5l-0.4-16.9H26.1z M26,38.5c-0.5,0.5-1.1,0.7-1.9,0.7s-1.5-0.2-2-0.7s-0.7-1.1-0.7-1.9c0-0.8,0.2-1.5,0.7-2s1.1-0.7,2-0.7
+	c0.8,0,1.4,0.2,1.9,0.7s0.7,1.1,0.7,2C26.7,37.4,26.4,38,26,38.5z"/>
+        </symbol>
+        <symbol id="ic-minus" x="0px" y="0px" viewBox="0 0 44 44" style="enable-background:new 0 0 44 44;" xml:space="preserve">
+            <style type="text/css">
+                .ic-minus { fill:none; }
+                .ic-minus-fill { fill: #c3c8d3; }
+            </style>
+            <rect class="ic-minus" width="44" height="44"/>
+            <rect class="ic-minus-fill" x="6" y="20" width="32" height="4"/>
+        </symbol>
+        <symbol id="ic-plus" x="0px" y="0px" viewBox="0 0 44 44" style="enable-background:new 0 0 44 44;" xml:space="preserve">
+            <style type="text/css">
+                .ic-plus { fill:none; }
+                .ic-plus-fill { fill: #c3c8d3; }
+            </style>
+            <rect class="ic-plus" width="44" height="44"/>
+            <rect class="ic-plus-fill" x="6" y="20" width="32" height="4"/>
+            <rect class="ic-plus-fill" x="6" y="20" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 44 3.552714e-15)" width="32" height="4"/>
+        </symbol>
+    </svg>
+</head>
+<body>
+<app-root>Loading...</app-root>
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="scripts.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+</html>
